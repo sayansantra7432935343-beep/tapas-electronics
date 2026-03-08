@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Tapas Electronics — Warm Industrial Audio theme */
+    /* Background: near-white warm cream */
+    --background: 0.98 0.005 80;
+    --foreground: 0.18 0.015 60;
+
+    /* Card: clean white */
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.015 60;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.015 60;
+
+    /* Primary: deep charcoal */
+    --primary: 0.2 0.01 60;
+    --primary-foreground: 0.98 0.005 80;
+
+    /* Secondary: warm mid grey */
+    --secondary: 0.93 0.008 70;
+    --secondary-foreground: 0.2 0.01 60;
+
+    /* Muted */
+    --muted: 0.95 0.005 80;
+    --muted-foreground: 0.5 0.01 60;
+
+    /* Accent: amber/orange */
+    --accent: 0.72 0.18 55;
+    --accent-foreground: 0.12 0.015 50;
+
+    /* Brand amber (CSS var for use with arbitrary values) */
+    --brand-amber: 0.72 0.18 55;
+    --brand-amber-dark: 0.62 0.2 50;
+    --brand-blue: 0.42 0.15 255;
+    --brand-dark: 0.14 0.01 50;
+    --brand-dark-mid: 0.18 0.01 50;
+
+    /* Service section bg */
+    --section-alt: 0.95 0.005 80;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border */
+    --border: 0.88 0.008 70;
+    --input: 0.88 0.008 70;
+    --ring: 0.72 0.18 55;
+
+    /* Chart */
+    --chart-1: 0.72 0.18 55;
+    --chart-2: 0.42 0.15 255;
+    --chart-3: 0.55 0.12 180;
+    --chart-4: 0.65 0.15 30;
+    --chart-5: 0.78 0.12 95;
+
+    /* Sidebar */
+    --sidebar: 0.14 0.01 50;
+    --sidebar-foreground: 0.98 0.005 80;
+    --sidebar-primary: 0.72 0.18 55;
+    --sidebar-primary-foreground: 0.12 0.015 50;
+    --sidebar-accent: 0.22 0.01 50;
+    --sidebar-accent-foreground: 0.98 0.005 80;
+    --sidebar-border: 0.25 0.01 50;
+    --sidebar-ring: 0.72 0.18 55;
+  }
+
+  .dark {
+    --background: 0.14 0.01 50;
+    --foreground: 0.95 0.005 80;
+    --card: 0.18 0.01 50;
+    --card-foreground: 0.95 0.005 80;
+    --popover: 0.22 0.01 50;
+    --popover-foreground: 0.95 0.005 80;
+    --primary: 0.72 0.18 55;
+    --primary-foreground: 0.12 0.015 50;
+    --secondary: 0.22 0.01 50;
+    --secondary-foreground: 0.95 0.005 80;
+    --muted: 0.22 0.01 50;
+    --muted-foreground: 0.62 0.01 60;
+    --accent: 0.72 0.18 55;
+    --accent-foreground: 0.12 0.015 50;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.205 0 0;
+    --border: 0.28 0.01 50;
+    --input: 0.28 0.01 50;
+    --ring: 0.72 0.18 55;
+    --chart-1: 0.72 0.18 55;
+    --chart-2: 0.55 0.18 255;
+    --chart-3: 0.65 0.14 180;
+    --chart-4: 0.72 0.15 30;
+    --chart-5: 0.82 0.12 95;
+    --sidebar: 0.14 0.01 50;
+    --sidebar-foreground: 0.95 0.005 80;
+    --sidebar-primary: 0.72 0.18 55;
+    --sidebar-primary-foreground: 0.12 0.015 50;
+    --sidebar-accent: 0.22 0.01 50;
+    --sidebar-accent-foreground: 0.95 0.005 80;
+    --sidebar-border: 0.25 0.01 50;
+    --sidebar-ring: 0.72 0.18 55;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-brand-amber {
+    color: oklch(var(--brand-amber));
+  }
+  .bg-brand-amber {
+    background-color: oklch(var(--brand-amber));
+  }
+  .bg-brand-dark {
+    background-color: oklch(var(--brand-dark));
+  }
+  .bg-brand-dark-mid {
+    background-color: oklch(var(--brand-dark-mid));
+  }
+  .text-brand-blue {
+    color: oklch(var(--brand-blue));
+  }
+  .border-brand-amber {
+    border-color: oklch(var(--brand-amber));
+  }
+  .hover\:bg-brand-amber-dark:hover {
+    background-color: oklch(var(--brand-amber-dark));
+  }
+  .section-alt-bg {
+    background-color: oklch(var(--section-alt));
+  }
+}
